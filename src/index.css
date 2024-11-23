@@ -6,3 +6,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.slick-slider .slick-dots li {
+
+margin-left: -3px;
+ }
+
+.slick-slider .slick-dots li button:before {
+
+  width: 100% !important;
+  color: transparent;
+  height: 30%;
+  background-color: cadetblue !important;
+
+}
+
+.slick-slider .slick-dots li.slick-active button:before {
+
+  width: 100% !important;
+  color: transparent;
+  height: 30%;
+  background-color: cadetblue !important;
+
+}
+
+
+

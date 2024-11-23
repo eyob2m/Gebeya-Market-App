@@ -9,6 +9,9 @@ export default {
       colors :{
         'primaryColor': '#882BEC',
         'buttonColor': '#FEA301'
+      },
+      fontFamily: {
+        'poppins': ['Poppins']
       }
     },
   },
