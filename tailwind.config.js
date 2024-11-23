@@ -11,7 +11,8 @@ export default {
         'buttonColor': '#FEA301'
       },
       fontFamily: {
-        'poppins': ['Poppins']
+        'poppins': ['Poppins'],
+        'alfa': ['Alfa Slab One']
       }
     },
   },

@@ -14,12 +14,12 @@ const browserCategoryCard = ({ image, title, desc }) => {
 
         <div className="w-full flex flex-col items-center justify-center px-1">
           <div>
-            <h1 className="text-[16px] font-poppins font-[600] text-[#000000]">
+            <h1 className="text-[1rem] font-poppins font-[600] text-[#000000]">
               {title}
             </h1>
           </div>
           <div className="flex justify-between items-start">
-            <h2 className="text-[12px] text-center font-poppins font-[400] text-[#808080]">
+            <h2 className="text-[0.75rem] text-center font-poppins font-[400] text-[#808080]">
               {desc}
             </h2>
           </div>
