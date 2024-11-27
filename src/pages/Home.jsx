@@ -1,6 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img from "../assets/4.jpg";
+import img from "../assets/images/men_suit.jpg";
 import Slider from "react-slick";
 
 import latestCollectionCard from "../components/latestCollectionCard";
@@ -39,23 +39,36 @@ function Home() {
       {/* Hero section */}
       <section
         id="hero-section"
-        className="py-4  h-[373px] font-extrabold font-serif bg-primaryColor text-white"
+        className="py-4 md:h-fit h-[373px] md:relative  font-extrabold font-serif bg-primaryColor text-white"
       >
         <div
-          className="flex font-alfa text-[2rem] font-[400] 
- p-5 gap-4 items-center"
+          className="flex font-alfa text-[2rem] md:text-[128px] font-[400] 
+ p-5 gap-4 md:gap-8 items-center"
         >
-          <h1 className="flex-1 self-start">TIMBU</h1>
-          <div className="w-[100px] h-[100px]">
+          <div className="flex-1 md:flex md:flex-col md:items-center self-start">
+
+          <h1 className="flex-1  md:self-center self-start">Gebeya</h1>
+          <div className="w-[100px] md:h-[100px] max-md:hidden">
             <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
           </div>
-          <h1 className="flex-1 self-end">SHOP</h1>
+          </div>
+          <div className="w-[100px] md:h-[300px] md:w-[300px] h-[100px]">
+            <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+          </div>
+          <div className="flex-1 md:flex md:flex-col md:items-start  self-end">
+          <p className="max-md:p-8 max-md:hidden font-poppins font-[400] text-start text-[1.45rem] ">
+          Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service</p>
+<h1 className="flex-1   self-start">SHOP</h1>
+<div className="w-[100px] md:h-[100px] max-md:hidden">
+  <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+</div>
+</div>
         </div>
-        <div className="px-5">
-          <p className="p-8 font-poppins font-[400] text-[0.75rem] text-center">
+        <div className="px-5 md:w-full md:flex md:justify-center">
+          <p className="p-8 md:hidden font-poppins font-[400] text-[0.75rem] text-center">
           Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service</p>
 
-          <button className="rounded-md font-poppins font-[500] text-[1rem] py-2 bg-buttonColor w-full">
+          <button className="rounded-md md:px-20 md:w-fit font-poppins font-[500] text-[1rem] py-2 bg-buttonColor w-full">
             Explore Now
           </button>
         </div>
@@ -125,8 +138,8 @@ function Home() {
           <div className="absolute right-8 top-10 w-4 h-4 bg-primaryColor rounded-full"></div>
           <div className="absolute right-20 top-11 w-3 h-3 bg-primaryColor rounded-full"></div>
           <div className="absolute right-40 top-24 w-3 opacity-35 h-3 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-40 top-48 w-6 opacity-60 h-6 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-20 top-48 w-3 opacity-60 h-3 bg-primaryColor rounded-full"></div>
+          <div className="absolute right-40 top-32 w-6 opacity-60 h-6 bg-primaryColor rounded-full"></div>
+          <div className="absolute right-20 top-30 w-3 opacity-60 h-3 bg-primaryColor rounded-full"></div>
         </div>
       </section>
       {/* Browser categories */}

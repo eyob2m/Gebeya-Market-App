@@ -1,5 +1,5 @@
 import img from "../assets/images/men_shoe.jpg";
-
+import { Link } from "react-router-dom";
 import { BiCart } from "react-icons/bi";
 import {
   FaChevronDown,
@@ -205,9 +205,12 @@ const Cart = () => {
               </span>
             </div>
           </button>
+          <Link to={'/checkout'}>
           <button className="rounded-md font-poppins font-[400] text-[1rem] text-white py-2 bg-buttonColor w-full">
             Buy now
           </button>
+          </Link>
+         
           <div className="w-full mt-3 flex flex-col">
             <h2 className="font-[300] text[1.25rem] self-center">
               Share this product
