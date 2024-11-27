@@ -1,7 +1,7 @@
-import img from "../assets/4.jpg";
-import { BiArrowBack, BiCart, BiSearch } from "react-icons/bi";
+import img from "../assets/images/men_shoe.jpg";
+
+import { BiCart } from "react-icons/bi";
 import {
-  FaBagShopping,
   FaChevronDown,
   FaInstagram,
   FaWhatsapp,
@@ -15,6 +15,8 @@ import { GrDeliver, GrDocumentOutlook } from "react-icons/gr";
 import { latestCollections } from "../data/latestCollections";
 import latestCollectionCard from "../components/latestCollectionCard";
 import { useState } from "react";
+import Footer from "../components/footer";
+import Nav from "../components/nav";
 
 const Cart = () => {
   let settings = {
@@ -23,17 +25,12 @@ const Cart = () => {
     slidesToScroll: 1,
     slidesToShow: 1,
   };
-  const [about, setabout] = useState(false);
-  
-  const [products, setproducts] = useState(false);
-  const [discover, setdiscover] = useState(false);
-
   const [overview, setoverview] = useState(false);
   const [desc, setdesc] = useState(false);
   const [warranty, setwarranty] = useState(false);
   const [reviews, setreviews] = useState(false);
 
-  const p = [img, img, img, img];
+  const p = [img, img, img];
   let settings2 = {
     speed: 300,
     dots: true,
@@ -42,22 +39,10 @@ const Cart = () => {
   };
   return (
     <div className="font-poppins">
-      <header className="relative flex px-4 py-2 items-center bg-white  justify-between">
-        <BiArrowBack onClick={() => {}} size={25} />
-        <h1 className="mb-3 text-5xl ">ገ</h1>
-        <div className="flex gap-2 border-solid px-3 border rounded-3xl border-gray-600 text-black items-center">
-          <BiSearch />
-          <input
-            placeholder="search..."
-            className="py-1  activ:border-none active:outline-none focus:border-none focus:outline-none  bg-transparent placeholder:text-gray-400"
-            type="text"
-          />
-        </div>
-        <FaBagShopping
-          className="bg-black text-white rounded-full p-1"
-          size={29}
-        />
-      </header>
+      {/* navigation */}
+      <Nav />
+      <div className=" px-5">
+      <div className="border-2 pb-9 rounded-xl border-solid bg-white border-[#C1C1C1]">
       <section>
         <div>
           <div>
@@ -70,12 +55,12 @@ const Cart = () => {
                         <img
                           className="rounded-lg  bg-[#F2F2F2] object-contain"
                           src={img}
-                          alt="hi"
+                          alt="mail photo"
                         />
                       </div>
                     </div>
                   </div>
-                </div>{" "}
+                </div>
                 <div className="p-3">
                   <div className="   rounded-md p-2">
                     <div className="p-8 py-8 mb-4 bg-[#F2F2F2] relative rounded-lg">
@@ -111,15 +96,13 @@ const Cart = () => {
               </div>
               <div className="w-full  flex flex-col items-center justify-center px-8">
                 <div>
-                  <h1 className="text-[1rem] font-poppins font-[600] text-[#000000]">
-                    Foot and Go
+                  <h1 className="text-[1.5rem] font-poppins font-[600] text-[#000000]">
+                  Burberry shine
                   </h1>
                 </div>
                 <div className="flex justify-between items-start">
-                  <h2 className="text-[0.75rem] text-center font-poppins font-[400] text-[#808080]">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Beatae corrupti similique eaque?
-                  </h2>
+                  <h2 className="text-[1rem] text-center font-poppins font-[400] flex gap-2  text-[#808080]">
+               <h3 className="font-[400] text-[1rem]">Brand: </h3> Fendi</h2>
                 </div>
               </div>
             </div>
@@ -236,133 +219,143 @@ const Cart = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
       <hr className="mb-5 bg-black h-[1px] w-full" />
-     <center>
-     <h1 className="text-[1.25rem] font-[500] text-[#1E1E1E]">Delivery & Returns</h1>
-      
-     </center>
-     <hr className="mb-3 mt-5 bg-black h-[1px] w-full" />
-     <section className="p-8 pb-1 font-poppins  ">
-     <h1 className="font-[500] text-[1.125rem] mb-4 text-[#1E1E1E]">Location</h1>
-     <div className="flex flex-col gap-6">
-     <select className="p-2  rounded-lg  border border-solid border-gray-400 " name="location" id="location">
-        <option value="location">Location</option>
-        <option value="aa">Addis Ababa</option>
-        <option value="dd">Dire Dawa</option>
-      </select>
-      <select className="p-2  rounded-lg  border border-solid border-gray-400 " name="sub-location" id="sub-location">
-        <option value="sub-location">Sub-Location</option>
-        <option value="aa">Bole</option>
-        <option value="dd">Saris</option>
-      </select>
-     </div>
-      <div className="my-8 p-2 flex flex-col gap-5">
-        <div className="flex place-items-baseline gap-6">
-        <div>
+      <center>
+        <h1 className="text-[1.25rem] font-[500] text-[#1E1E1E]">
+          Delivery & Returns
+        </h1>
+      </center>
+      <hr className="mb-3 mt-5 bg-black h-[1px] w-full" />
+      <section className="p-8 pb-1 font-poppins  ">
+        <h1 className="font-[500] text-[1.125rem] mb-4 text-[#1E1E1E]">
+          Location
+        </h1>
+       <div className="flex flex-col gap-5">
+       <div className="flex flex-col gap-6">
+          <select
+            className="p-2  rounded-lg  border border-solid border-gray-400 "
+            name="location"
+            id="location"
+          >
+            <option value="location">Location</option>
+            <option value="aa">Addis ababa</option>
+            <option value="dd">Dire dawa</option>
+          </select>
           
-          <GrDeliver />
         </div>
-
-        <div className="flex flex-col gap-2">
-          <h1 className="text-[1rem] font-[500] text-[#1E1E1E]">Deliver</h1>
-         <div className="flex flex-col gap-2">
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-      
-         </div>
-           </div>
-        </div>
-        <div className="flex place-items-baseline gap-6">
-        <div>
+        
+        <div className="flex flex-col gap-6">
+          <select
+            className="p-2  rounded-lg  border border-solid border-gray-400 "
+            name="sub-location"
+            id="sub-location"
+          >
+            <option value="sub-location">Sub-Location</option>
+            <option value="bole">Bole</option>
+            <option value="saris">Saris</option>
+          </select>
           
-        <GrDocumentOutlook />
         </div>
+       </div>
+        <div className="my-8 p-2 flex flex-col gap-5">
+          <div className="flex place-items-baseline gap-6">
+            <div>
+              <GrDeliver />
+            </div>
 
-        <div className="flex flex-col gap-2">
-          <h1 className="text-[1rem] font-[500] text-[#1E1E1E]">Return Policy</h1>
-         <div className="flex flex-col gap-2">
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-         <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</p>
-      
-         </div>
-           </div>
+            <div className="flex flex-col gap-2">
+              <h1 className="text-[1rem] font-[500] text-[#1E1E1E]">Deliver</h1>
+              <div className="flex flex-col gap-2">
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                Estimated delivery time is 1-12 business days 
+                </p>
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                For Same-Day-Delivery: Please place your order before 12pm
+                </p>
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                Next-Day-Delivery: Orders placed after 12pm will be delivered the next day.
+                </p>
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                Note: Availability may vary by locations </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex place-items-baseline gap-6">
+            <div>
+              <GrDocumentOutlook />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <h1 className="text-[1rem] font-[500] text-[#1E1E1E]">
+                Return Policy
+              </h1>
+              <div className="flex flex-col gap-2">
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                Guaranteed 7-day return policy
+                </p>
+                <p className="text-[0.75rem] font-[500] text-[#1E1E1E] ">
+                For details about return shipping options, please visit our Contact page
+                </p>
+               
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-     </section>
+      </section>
 
       <hr className=" bg-black h-[1px] w-full" />
       <div className="flex p-7 gap-4 flex-col ">
-            <div
-              onClick={() => setoverview((prv) => (prv = !prv))}
-              className="flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">Overview</h1>{" "}
-              <FaChevronDown className={`${overview ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={` p-3 text-sm ${
-                overview ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-            <div
-              onClick={() => setdesc((prv) => (prv = !prv))}
-              className=" flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">
-                Description
-              </h1>{" "}
-              <FaChevronDown className={`${desc ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={` p-3 text-sm ${
-                desc ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
+        <div
+          onClick={() => setoverview((prv) => (prv = !prv))}
+          className="flex justify-between"
+        >
+          <h1 className="font-poppins font-[460] text-[1rem]">Overview</h1>{" "}
+          <FaChevronDown className={`${overview ? "" : "rotate-180"}`} />
+        </div>
+        <h1 className={` p-3 text-sm ${overview ? "block" : "hidden"}`}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
+          reiciendis exercitationem nulla!
+        </h1>
+        <div
+          onClick={() => setdesc((prv) => (prv = !prv))}
+          className=" flex justify-between"
+        >
+          <h1 className="font-poppins font-[460] text-[1rem]">Description</h1>{" "}
+          <FaChevronDown className={`${desc ? "" : "rotate-180"}`} />
+        </div>
+        <h1 className={` p-3 text-sm ${desc ? "block" : "hidden"}`}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
+          reiciendis exercitationem nulla!
+        </h1>
 
-            <div
-              onClick={() => setwarranty((prv) => (prv = !prv))}
-              className="discover  flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">Warranty</h1>{" "}
-              <FaChevronDown className={`${warranty ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={` p-3 text-sm ${
-                warranty ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-            <div
-              onClick={() => setreviews((prv) => (prv = !prv))}
-              className="discover  flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">Reviews</h1>{" "}
-              <FaChevronDown className={`${reviews ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={` p-3 text-sm ${
-                reviews ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-          </div>
+        <div
+          onClick={() => setwarranty((prv) => (prv = !prv))}
+          className="discover  flex justify-between"
+        >
+          <h1 className="font-poppins font-[460] text-[1rem]">Warranty</h1>{" "}
+          <FaChevronDown className={`${warranty ? "" : "rotate-180"}`} />
+        </div>
+        <h1 className={` p-3 text-sm ${warranty ? "block" : "hidden"}`}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
+          reiciendis exercitationem nulla!
+        </h1>
+        <div
+          onClick={() => setreviews((prv) => (prv = !prv))}
+          className="discover  flex justify-between"
+        >
+          <h1 className="font-poppins font-[460] text-[1rem]">Reviews</h1>{" "}
+          <FaChevronDown className={`${reviews ? "" : "rotate-180"}`} />
+        </div>
+        <h1 className={` p-3 text-sm ${reviews ? "block" : "hidden"}`}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
+          reiciendis exercitationem nulla!
+        </h1>
+      </div>
       <hr className="mb-8 bg-black h-[1px] w-full" />
       <section id="latest-collections">
         <h1 className="p-5 font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
@@ -374,77 +367,10 @@ const Cart = () => {
             return latestCollectionCard({ ...col });
           })}
         </Slider>
-      </section>
-      <section id="footer" className="mt-20">
-        <div className="bg-primaryColor text-white">
-          <div className="flex p-7 gap-2 flex-col ">
-            <div
-              onClick={() => setabout((prv) => (prv = !prv))}
-              className="about   flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">About</h1>{" "}
-              <FaChevronDown className={`${about ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={`aboutdetail  p-3 text-sm ${
-                about ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-            <div
-              onClick={() => setproducts((prv) => (prv = !prv))}
-              className=" flex justify-between"
-            >
-              <h1 className="products  font-poppins font-[460] text-[1rem]">
-                Products
-              </h1>{" "}
-              <FaChevronDown className={`${products ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={`productsdetail  p-3 text-sm ${
-                products ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-
-            <div
-              onClick={() => setdiscover((prv) => (prv = !prv))}
-              className="discover  flex justify-between"
-            >
-              <h1 className="font-poppins font-[460] text-[1rem]">Discover</h1>{" "}
-              <FaChevronDown className={`${discover ? "" : "rotate-180"}`} />
-            </div>
-            <h1
-              className={`discoverdetail  p-3 text-sm ${
-                discover ? "block" : "hidden"
-              }`}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              aliquam voluptatem, ea impedit necessitatibus cumque quidem ab
-              reiciendis exercitationem nulla!
-            </h1>
-          </div>
-          <div className="w-full flex flex-col items-center justify-center">
-            <hr className="bg-white opacity-100 my-3 w-[80%] " />
-            <div className="flex my-3 gap-[.5px]">
-              <div className="border-4 border-transparent border-t-white border-r-white rounded-lg h-[1.69rem] w-[1.01rem]"></div>
-              <div className="border-4 border-transparent border-t-white border-l-white rounded-lg h-[1.69rem] w-[1.01rem]"></div>
-            </div>
-            <div className="flex mt-5 mb-5 justify-center gap-3 w-[60%]">
-              <FaInstagram className="text-xl" />
-              <FaWhatsapp className="text-xl" />
-              <FaXTwitter className="text-xl" />
-            </div>
-          </div>
-          <div></div>
-        </div>
-      </section>
+      </section> 
+     </div> </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

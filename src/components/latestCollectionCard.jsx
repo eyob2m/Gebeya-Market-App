@@ -1,6 +1,6 @@
 import { BsStarFill } from "react-icons/bs";
-import { HiHeart } from "react-icons/hi";
-import { RiHeartLine } from "react-icons/ri";
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa6";
 
 const latestCollectionCard = (
 {  liked,
@@ -17,15 +17,15 @@ const latestCollectionCard = (
     <div className="p-3 ">
       <div className="border-solid w-[266px] border border-[#C1C1C1] rounded-md p-2">
         
-          <div className="relative p-1 rounded-lg bg-[#F2F2F2]">
+          <div className="relative p-1  h-[136px] rounded-lg bg-[#F2F2F2]">
             <img
-              className="rounded-lg w- bg-[#F2F2F2] object-contain"
+              className="rounded-lg w-full h-full bg-[#F2F2F2] object-contain"
               src={image}
               alt={title}
             />
             <div className="top-0 left-0 flex w-full px-5 py-2 justify-between absolute">
               <div className="flex justify-center items-center  bg-white p-1 rounded-full">
-                {liked ? <HiHeart /> : <RiHeartLine />}
+                {liked ? <FaHeart className="text-buttonColor" /> : <CiHeart />}
               </div>
               <h1 className="flex justify-center items-center text-[0.625rem] font-poppins font-[400]  bg-white px-1 rounded-full">
                 {stage}

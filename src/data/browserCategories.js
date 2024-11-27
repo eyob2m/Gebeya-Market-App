@@ -1,17 +1,12 @@
-import img from "../assets/4.jpg";
+import wdress from "../assets/images/women_dress.jpg";
+import mshirt from "../assets/images/men_shirt.jpg";
+
 export const browserCategories = [
     {
-        'image': img, 'title': "Men Shoes", desc: "This is description of the product"
+        'image': mshirt, 'title': "Casual wear", desc: "Over 20 categories in stock"
     }, {
-        'image': img, 'title': "Men Shoes", desc: "This is description of the product"
+        'image': wdress, 'title': "Vintage", desc: "Over 14 categories in stock"
     }, {
-        'image': img, 'title': "Shoes", desc: "This is description of the product"
+        'image': mshirt, 'title': "Summer", desc: "Over 20 categories in stock"
     }, {
-        'image': img, 'title': "Women Shoes", desc: "This is description of the product"
-    }, {
-        'image': img, 'title': "Shoes", desc: "This is description of the product"
-    }, {
-        'image': img, 'title': "Kids Shoes", desc: "This is description of the product"
-    }, {
-        'image': img, 'title': "Shoes", desc: "This is description of the product"
     }];

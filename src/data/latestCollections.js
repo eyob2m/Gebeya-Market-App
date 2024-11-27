@@ -1,8 +1,9 @@
-import img from "../assets/4.jpg";
+import bag from "../assets/images/bag.jpg";
+
 export const latestCollections = [
     {
         liked: true,
-        image: img,
+        image: bag,
         stage: "In stock",
         gfor: "Women",
 
@@ -10,11 +11,11 @@ export const latestCollections = [
         title: "French KIss Bag",
         sub: "ALDO",
         price: "$500",
-        added: true
+        added: false
     }, {
         liked: false,
-        image: img,
-        stage: "Sold",
+        image: bag,
+        stage: "In stock",
         gfor: "Men",
 
         rating: "3.3k",
@@ -24,8 +25,8 @@ export const latestCollections = [
         added: true
     }, {
         liked: true,
-        image: img,
-        stage: "In Shipping",
+        image: bag,
+        stage: "In stock",
         gfor: "Women",
         rating: "2.3k",
         title: "  KIss Bag",
@@ -34,7 +35,7 @@ export const latestCollections = [
         added: true
     }, {
         liked: true,
-        image: img,
+        image: bag,
         stage: "In stock",
         gfor: "Kids",
 
