@@ -50,7 +50,7 @@ function Home() {
     prevArrow: <Prev />,
     dots: true,
     slidesToScroll: 1,
-    variableWidth: true,
+    slidesToShow: 3,
   };
 
   let settings2 = {
@@ -130,7 +130,7 @@ function Home() {
       </section>
       {/* Category Menu lists */}
       <section id="category-menu-lists" className="w-screen my-10 ">
-        <div className="p-3 overflow-x-scroll flex gap-5">
+        <div className="p-3 md:px-24 overflow-x-scroll md:w-full flex md:justify-between gap-5">
           {Object.entries(categoryLists).map(([key, val]) => {
             return (
               <button
@@ -139,7 +139,7 @@ function Home() {
                   categorySelected == key
                     ? "bg-buttonColor border-0 text-white"
                     : "bg-transparent"
-                } rounded-3xl py-2 px-5  font-poppins border border-[#C1C1C1] text-[#1E1E1E]  text-[16px] font-[600]`}
+                } rounded-3xl py-2 px-5 md:w-full md:py-3  font-poppins border border-[#C1C1C1] text-[#1E1E1E]  text-[16px] font-[600]`}
                 key={val}
               >
                 {key}
@@ -147,7 +147,7 @@ function Home() {
             );
           })}
         </div>
-        <div className="grid  grid-cols-2">
+        <div className="grid md:px-24 md:grid-cols-6  grid-cols-2">
           {categoryLists[categorySelected].map((items) => {
             return categoryCard(items);
           })}
@@ -164,28 +164,28 @@ function Home() {
         </div>
       </section>
       {/* Explore section */}
-      <section id="explore-section" className="p-4">
-        <div className=" p-4 bg-[#D0D0D0] relative">
-          <div className=" flex flex-col gap-3 ">
-            <h1 className="text-[1.125rem] font-poppins font-[600] text-primaryColor">
+      <section id="explore-section " className=" p-4 md:px-24">
+        <div className="md:p-16 md:rounded-3xl  p-4 max-md:bg-[#D0D0D0] explore relative">
+          <div className="flex flex-col gap-3 ">
+            <h1 className="text-[1.125rem] md:text-[40px] font-poppins font-[600] text-primaryColor">
               Our Curated Summer Collection
             </h1>
-            <h2 className="text-[0.875rem] font-poppins font-[400] text-primaryColor">
+            <h2 className="text-[0.875rem] md:text-[24px] font-poppins md:w-[50%] font-[400] text-primaryColor">
               Explore our curated summer collection featuring trending styles,
               vibrant colors and lightweight fabrics perfect for long days and
               nights.
             </h2>
           </div>
-          <div className="w-full flex justify-center">
-            <button className="rounded-lg py-2 mt-6 font-poppins font-[400] bg-buttonColor  text-white w-[80%]">
+          <div className="w-full flex md:justify-start justify-center">
+            <button className="md:text-start md:w-fit md:px-4 rounded-lg py-2 mt-6 font-poppins font-[400] bg-buttonColor  text-white w-[80%]">
               Explore Now
             </button>
           </div>
-          <div className="absolute right-8 top-10 w-4 h-4 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-20 top-11 w-3 h-3 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-40 top-24 w-3 opacity-35 h-3 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-40 top-32 w-6 opacity-60 h-6 bg-primaryColor rounded-full"></div>
-          <div className="absolute right-20 top-30 w-3 opacity-60 h-3 bg-primaryColor rounded-full"></div>
+          <div className="absolute md:left-[40%] max-md:right-8 top-10 w-4 md:w-8 md:h-8 h-4 bg-primaryColor rounded-full"></div>
+          <div className="absolute  md:left-[70%] md:top-[40%] right-20 top-11 w-3 h-3 bg-primaryColor rounded-full"></div>
+          <div className="absolute right-40 top-24 w-3 md:left-[40%] md:top-[30%] opacity-35 h-3 bg-primaryColor rounded-full"></div>
+          <div className="absolute right-40 top-32 w-6 opacity-60 h-6 md:left-[50%] md:top-[60%] bg-primaryColor rounded-full"></div>
+          <div className="absolute right-20 top-30 w-3 opacity-60 h-3 bg-primaryColor md:left-[80%] md:top-[60%] rounded-full"></div>
         </div>
       </section>
       {/* Browser categories */}

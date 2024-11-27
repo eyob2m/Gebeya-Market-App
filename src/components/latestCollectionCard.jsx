@@ -15,9 +15,9 @@ const latestCollectionCard = (
 ) => {
   return (
     <div className="p-3 ">
-      <div className="border-solid w-[266px] border border-[#C1C1C1] rounded-md p-2">
+      <div className="border-solid md:w-full md:h-full md:py-5 w-[266px] border border-[#C1C1C1] rounded-md p-2">
         
-          <div className="relative p-1  h-[136px] rounded-lg bg-[#F2F2F2]">
+          <div className="relative p-1 md:h-[300px]  h-[136px] rounded-lg bg-[#F2F2F2]">
             <img
               className="rounded-lg w-full h-full bg-[#F2F2F2] object-contain"
               src={image}

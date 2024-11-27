@@ -25,5 +25,20 @@ export const categoryLists = {
         'image': kbag, 'title': "Bag", desc: "This is description of the product"
     }, {
         'image': kshoe, 'title': "Shoes", desc: "This is description of the product"
+    }]
+    , "Perfums": [{
+        'image': kbag, 'title': "Bag", desc: "This is description of the product"
+    }, {
+        'image': kshoe, 'title': "Shoes", desc: "This is description of the product"
     }],
+     "Sport": [{
+        'image': kbag, 'title': "Bag", desc: "This is description of the product"
+    }, {
+        'image': kshoe, 'title': "Shoes", desc: "This is description of the product"
+    }]
+    , "Jewelry": [{
+        'image': kbag, 'title': "Bag", desc: "This is description of the product"
+    }, {
+        'image': kshoe, 'title': "Shoes", desc: "This is description of the product"
+    }]
 };

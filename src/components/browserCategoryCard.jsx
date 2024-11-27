@@ -1,7 +1,7 @@
 const browserCategoryCard = ({ image, title, desc }) => {
   return (
     <div className="p-3">
-      <div className="   rounded-md p-2">
+      <div className=" md:w-[40%]  rounded-md p-2">
         <div className="p-8 py-8 mb-4 bg-[#F2F2F2] relative rounded-lg">
           <div className="relative bg-[#F2F2F2]">
             <img
