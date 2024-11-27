@@ -151,7 +151,7 @@ const Cart = () => {
             </div>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="flex  items-center gap-4">
+            <div className="flex  items-center gap-3">
               <h1 className="font-[400] text-[0.875rem] text-[#1E1E1E]">
                 Size:
               </h1>

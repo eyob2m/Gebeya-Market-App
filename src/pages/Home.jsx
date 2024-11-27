@@ -14,6 +14,25 @@ import { GrNext } from "react-icons/gr";
 
 import Footer from "./../components/footer";
 import Nav from "../components/nav";
+import { MdMenu } from "react-icons/md";
+import { FcNext } from "react-icons/fc";
+
+const Next = (props) => {
+  const { onClick } = props;
+  return (
+    <div  className="absolute -top-10 p-2 right-10 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
+     <FcNext />
+    </div>
+  );
+};
+const Prev = (props) => {
+  const { onClick } = props;
+  return (
+    <div  className="absolute -top-10 p-2 right-24 rotate-180 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
+     <FcNext />
+    </div>
+  );
+};
 
 function Home() {
   const [categorySelected, setcategorySelected] = useState("Men");
@@ -25,8 +44,18 @@ function Home() {
     variableWidth: true,
   };
 
+  let settings3 = {
+    speed: 300,
+    nextArrow: <Next />,
+    prevArrow: <Prev />,
+    dots: true,
+    slidesToScroll: 1,
+    variableWidth: true,
+  };
+
   let settings2 = {
     speed: 300,
+  
     dots: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -46,27 +75,30 @@ function Home() {
  p-5 gap-4 md:gap-8 items-center"
         >
           <div className="flex-1 md:flex md:flex-col md:items-center self-start">
-
-          <h1 className="flex-1  md:self-center self-start">Gebeya</h1>
-          <div className="w-[100px] md:h-[100px] max-md:hidden">
-            <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
-          </div>
+            <h1 className="flex-1  md:self-center self-start">Gebeya</h1>
+            <div className="w-[100px] md:h-[100px] max-md:hidden">
+              <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+            </div>
           </div>
           <div className="w-[100px] md:h-[300px] md:w-[300px] h-[100px]">
             <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
           </div>
           <div className="flex-1 md:flex md:flex-col md:items-start  self-end">
-          <p className="max-md:p-8 max-md:hidden font-poppins font-[400] text-start text-[1.45rem] ">
-          Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service</p>
-<h1 className="flex-1   self-start">SHOP</h1>
-<div className="w-[100px] md:h-[100px] max-md:hidden">
-  <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
-</div>
-</div>
+            <p className="max-md:p-8 max-md:hidden font-poppins font-[400] text-start text-[1.45rem] ">
+              Discover a world of convenience with our user-friendly platform,
+              curaated collections, and exceptional customer service
+            </p>
+            <h1 className="flex-1 self-start">SHOP</h1>
+            <div className="w-[100px] md:h-[100px] max-md:hidden">
+              <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+            </div>
+          </div>
         </div>
         <div className="px-5 md:w-full md:flex md:justify-center">
           <p className="p-8 md:hidden font-poppins font-[400] text-[0.75rem] text-center">
-          Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service</p>
+            Discover a world of convenience with our user-friendly platform,
+            curaated collections, and exceptional customer service
+          </p>
 
           <button className="rounded-md md:px-20 md:w-fit font-poppins font-[500] text-[1rem] py-2 bg-buttonColor w-full">
             Explore Now
@@ -74,12 +106,23 @@ function Home() {
         </div>
       </section>
       {/* Latest collection */}
-      <section id="latest-collections">
+      <section className="max-md:hidden" id="latest-collections ">
         <h1 className="p-5 font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
           Latest Collections
         </h1>
 
-        <Slider {...settings}>
+        <Slider  {...settings3}>
+          {latestCollections.map((col) => {
+            return latestCollectionCard({ ...col });
+          })}
+        </Slider>
+      </section>
+      <section className="md:hidden" id="latest-collections ">
+        <h1 className="p-5 font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
+          Latest Collections
+        </h1>
+
+        <Slider  {...settings}>
           {latestCollections.map((col) => {
             return latestCollectionCard({ ...col });
           })}
@@ -125,10 +168,13 @@ function Home() {
         <div className=" p-4 bg-[#D0D0D0] relative">
           <div className=" flex flex-col gap-3 ">
             <h1 className="text-[1.125rem] font-poppins font-[600] text-primaryColor">
-            Our Curated Summer Collection
+              Our Curated Summer Collection
             </h1>
             <h2 className="text-[0.875rem] font-poppins font-[400] text-primaryColor">
-            Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</h2>
+              Explore our curated summer collection featuring trending styles,
+              vibrant colors and lightweight fabrics perfect for long days and
+              nights.
+            </h2>
           </div>
           <div className="w-full flex justify-center">
             <button className="rounded-lg py-2 mt-6 font-poppins font-[400] bg-buttonColor  text-white w-[80%]">
