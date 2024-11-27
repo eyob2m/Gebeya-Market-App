@@ -1,8 +1,9 @@
 import Cart from "./pages/Cart";
-// import Home from "./pages/Home";
+import Checkout from "./pages/Checkout";
+import Home from "./pages/Home";
 
 function App(){
-  return <Cart />
+  return <Checkout />
 }
 
 export default App;
