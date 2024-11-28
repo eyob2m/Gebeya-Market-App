@@ -27,28 +27,28 @@ const latestCollectionCard = (
               <div className="flex justify-center items-center  bg-white p-1 rounded-full">
                 {liked ? <FaHeart className="text-buttonColor" /> : <CiHeart />}
               </div>
-              <h1 className="flex justify-center items-center text-[0.625rem] font-poppins font-[400]  bg-white px-1 rounded-full">
+              <h1 className="flex justify-center items-center text-[0.625rem] md:text-[12px] font-poppins font-[400]  bg-white px-1 rounded-full">
                 {stage}
               </h1>
            
           </div>
         </div>
         <div className="flex justify-between py-2 px-1">
-          <h2 className="border border-[#808080] text-[#808080] px-2 rounded-2xl font-poppins font-[400]">
+          <h2 className="border border-[#808080] text-[#808080] px-2 rounded-2xl md:text-[12px] font-poppins font-[400]">
             {gfor}
           </h2>
-          <div className="flex items-baseline gap-1  text-[0.75rem] font-poppins text-[#808080] font-[400]">
-           <BsStarFill className="text-yellow-300" />
+          <div className="flex items-baseline gap-1 md:text-[16px] text-[0.75rem] font-poppins text-[#808080] font-[400]">
+           <BsStarFill className="text-yellow-300 " />
             <div>{rating}+ rating</div>
           </div>
         </div>
         <div className="mt-5 px-1">
-          <h1 className="text-[1rem] font-poppins font-[600]">{title}</h1>
-          <h1 className="text-[0.75rem] font-poppins font-[500] text-[#808080]">
+          <h1 className="text-[1rem] md:text-[24px] font-poppins font-[600]">{title}</h1>
+          <h1 className="text-[0.75rem] md:text-[18px] font-poppins font-[500] text-[#808080]">
             {sub}
           </h1>
           <div className="flex justify-between items-start">
-            <h2 className="text-[1rem] font-poppins font-[600] self-end">
+            <h2 className="text-[1rem] md:text-[24px] font-poppins font-[600] self-end">
               {price}
             </h2>
             <button

@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
  
   font-size: 16px; 
@@ -29,6 +30,9 @@ background-repeat: no-repeat;
   border-radius: 10px;
   background-color: #DCDCDC !important;
 
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .slick-slider .slick-dots li.slick-active button:before {

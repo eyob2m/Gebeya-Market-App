@@ -5,6 +5,7 @@ import {
   FaWhatsapp,
   FaXTwitter,
 } from "react-icons/fa6";
+import icon from "../assets/Home page (Register/icons_474161 2.png";
 
 const Footer = () => {
   const [about, setabout] = useState(false);
@@ -12,7 +13,7 @@ const Footer = () => {
   const [discover, setdiscover] = useState(false);
   return (
     <section id="footer" className="mt-20">
-      <div className="bg-primaryColor text-white">
+      <div className="bg-primaryColor md:hidden text-white">
         <div className="flex p-7 gap-2 flex-col ">
           <div
             onClick={() => setabout((prv) => (prv = !prv))}
@@ -71,6 +72,40 @@ const Footer = () => {
           </div>
         </div>
         <div></div>
+      </div>
+
+
+      <div className="bg-primaryColor max-md:hidden flex justify-between px-20 text-white">
+       <div className="flex flex-col justify-center items-center">
+<img src={icon} alt="" />
+<div className="flex mt-5 mb-5 justify-center gap-3 w-[60%]">
+            <FaInstagram className="text-xl" />
+            <FaWhatsapp className="text-xl" />
+            <FaXTwitter className="text-xl" />
+          </div>
+       </div>
+       <div className="flex font-poppins font-[400] text-[24px] justify-center gap-16 items-center">
+        <ul>
+          <li className="font-poppins font-[700] text-[28px]">About</li>
+          <li>About Us</li>
+            <li>News & Blog</li>
+            <li>Location</li>
+        </ul>
+        <ul>
+          <li className="font-poppins font-[700] text-[28px]">Products</li>
+          <li>Pricing</li>
+            <li>Store</li>
+            <li>Features</li>
+
+        </ul>
+        <ul>
+          <li className="font-poppins font-[700] text-[28px]">Discover</li>
+          <li>Contact Us</li>
+            <li>Customers</li>
+            <li>Affiliates</li>
+            
+        </ul>
+       </div>
       </div>
     </section>
   );

@@ -2,6 +2,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../assets/images/men_suit.jpg";
 import Slider from "react-slick";
+import men from "../assets/Home page (Register/Ellipse 3.png";
+  import le from "../assets/Home page (Register/Ellipse 5.png";
+  import ri from "../assets/Home page (Register/Ellipse 4.png";
+  
 
 import latestCollectionCard from "../components/latestCollectionCard";
 import { latestCollections } from "../data/latestCollections";
@@ -16,11 +20,13 @@ import Footer from "./../components/footer";
 import Nav from "../components/nav";
 import { MdMenu } from "react-icons/md";
 import { FcNext } from "react-icons/fc";
+import { categoryListsP } from "../data/catPhone";
 
 const Next = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { onClick } = props;
   return (
-    <div  className="absolute -top-10 p-2 right-10 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
+    <div  className="absolute -top-[60px] p-2 right-10 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
      <FcNext />
     </div>
   );
@@ -28,14 +34,14 @@ const Next = (props) => {
 const Prev = (props) => {
   const { onClick } = props;
   return (
-    <div  className="absolute -top-10 p-2 right-24 rotate-180 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
+    <div  className="absolute -top-[60px] p-2 right-24 rotate-180 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
      <FcNext />
     </div>
   );
 };
 
 function Home() {
-  const [categorySelected, setcategorySelected] = useState("Men");
+  const [categorySelected, setcategorySelected] = useState("Women");
 
   let settings = {
     speed: 300,
@@ -60,6 +66,15 @@ function Home() {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+  let settings4 = {
+    speed: 300,
+    nextArrow: <Next />,
+    prevArrow: <Prev />,
+  
+    slidesToScroll: 1,
+    slidesToShow: 4,
+
+  };
 
   return (
     <div className="w-screen  overflow-x-hidden">
@@ -68,7 +83,7 @@ function Home() {
       {/* Hero section */}
       <section
         id="hero-section"
-        className="py-4 md:h-fit h-[373px] md:relative  font-extrabold font-serif bg-primaryColor text-white"
+        className="py-4 md:h-fit h-[373px] md:relative md:pt-10  font-extrabold font-serif bg-primaryColor text-white"
       >
         <div
           className="flex font-alfa text-[2rem] md:text-[128px] font-[400] 
@@ -76,21 +91,21 @@ function Home() {
         >
           <div className="flex-1 md:flex md:flex-col md:items-center self-start">
             <h1 className="flex-1  md:self-center self-start">Gebeya</h1>
-            <div className="w-[100px] md:h-[100px] max-md:hidden">
-              <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+            <div className="w-[223px] md:h-[223px] max-md:hidden">
+              <img src={le} className="rounded-[50%] h-full  w-full" alt="" />
             </div>
           </div>
-          <div className="w-[100px] md:h-[300px] md:w-[300px] h-[100px]">
-            <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+          <div className="w-[100px] md:self-start md:h-[300px] md:w-[300px] h-[100px]">
+            <img src={men} className="rounded-[50%] h-full  w-full" alt="" />
           </div>
           <div className="flex-1 md:flex md:flex-col md:items-start  self-end">
-            <p className="max-md:p-8 max-md:hidden font-poppins font-[400] text-start text-[1.45rem] ">
+            <p className="max-md:p-8 md:text-[20px] max-md:hidden font-poppins font-[400] text-start text-[1.45rem] ">
               Discover a world of convenience with our user-friendly platform,
               curaated collections, and exceptional customer service
             </p>
             <h1 className="flex-1 self-start">SHOP</h1>
-            <div className="w-[100px] md:h-[100px] max-md:hidden">
-              <img src={img} className="rounded-[50%] h-full  w-full" alt="" />
+            <div className="w-[223px] md:h-[223px] max-md:hidden">
+              <img src={ri} className="rounded-[50%] h-full  w-full" alt="" />
             </div>
           </div>
         </div>
@@ -100,22 +115,24 @@ function Home() {
             curaated collections, and exceptional customer service
           </p>
 
-          <button className="rounded-md md:px-20 md:w-fit font-poppins font-[500] text-[1rem] py-2 bg-buttonColor w-full">
+          <button className="rounded-md md:text-[24px] mb-10 md:px-20 md:w-fit font-poppins font-[500] text-[1rem] py-2 bg-buttonColor w-full">
             Explore Now
           </button>
         </div>
       </section>
       {/* Latest collection */}
-      <section className="max-md:hidden" id="latest-collections ">
-        <h1 className="p-5 font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
+      <section className="max-md:hidden md:my-20 md:px-20" id="latest-collections ">
+        <h1 className="p-5 md:text-[40px] md md:font-[600] font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
           Latest Collections
         </h1>
 
-        <Slider  {...settings3}>
+       <div>
+       <Slider  {...settings3}>
           {latestCollections.map((col) => {
             return latestCollectionCard({ ...col });
           })}
         </Slider>
+       </div>
       </section>
       <section className="md:hidden" id="latest-collections ">
         <h1 className="p-5 font-poppins font-[600] text-[1.125rem] text-[#1E1E1E]">
@@ -129,7 +146,7 @@ function Home() {
         </Slider>
       </section>
       {/* Category Menu lists */}
-      <section id="category-menu-lists" className="w-screen my-10 ">
+      <section id="category-menu-lists" className="w-screen md:my-8 my-10 ">
         <div className="p-3 md:px-24 overflow-x-scroll md:w-full flex md:justify-between gap-5">
           {Object.entries(categoryLists).map(([key, val]) => {
             return (
@@ -147,7 +164,12 @@ function Home() {
             );
           })}
         </div>
-        <div className="grid md:px-24 md:grid-cols-6  grid-cols-2">
+        <div className="grid md:px-24 md:hidden md:grid-cols-6  grid-cols-2">
+          {categoryListsP[categorySelected].map((items) => {
+            return categoryCard(items);
+          })}
+        </div>
+        <div className="grid max-md:hidden md:px-24 md:grid-cols-6  grid-cols-2">
           {categoryLists[categorySelected].map((items) => {
             return categoryCard(items);
           })}
@@ -181,6 +203,9 @@ function Home() {
               Explore Now
             </button>
           </div>
+          <div className="absolute md:left-[40%] md:top-[70%] max-md:right-8 top-10 w-4 md:w-10 md:h-10 h-10 bg-buttonColor rounded-full"></div>
+          <div className="absolute  md:left-[50%] md:top-[10%] right-20 top-11 w-6 h-6 bg-buttonColor rounded-full"></div>
+         
           <div className="absolute md:left-[40%] max-md:right-8 top-10 w-4 md:w-8 md:h-8 h-4 bg-primaryColor rounded-full"></div>
           <div className="absolute  md:left-[70%] md:top-[40%] right-20 top-11 w-3 h-3 bg-primaryColor rounded-full"></div>
           <div className="absolute right-40 top-24 w-3 md:left-[40%] md:top-[30%] opacity-35 h-3 bg-primaryColor rounded-full"></div>
@@ -189,15 +214,25 @@ function Home() {
         </div>
       </section>
       {/* Browser categories */}
-      <section id="browser-categories">
-        <h1 className="p-5 font-poppins font-[600] text-[18px]">
+      <section id="browser-categories ">
+        <h1 className="p-5  md:p-10 md:text-[40px] md:font-[600] md:px-24 font-poppins font-[600] text-[18px]">
           Browser by category
         </h1>
-        <Slider {...settings2}>
+       <div  className="md:hidden ">
+       <Slider  {...settings2}>
           {browserCategories.map((items) => {
             return browserCategoryCard(items);
           })}
         </Slider>
+       </div>
+       <div  className="max-md:hidden  md:p-16">
+       <Slider  {...settings4}>
+          {browserCategories.map((items) => {
+            return browserCategoryCard(items);
+          })}
+        </Slider>
+       </div>
+       
       </section>
       {/* Footer */}
       <Footer />
