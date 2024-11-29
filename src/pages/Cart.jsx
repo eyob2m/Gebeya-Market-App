@@ -208,13 +208,13 @@ const Cart = () => {
                   <div className="flex gap-2 items-center justify-center">
                     {" "}
                     <BiCart size={30} />{" "}
-                    <span className="font-[500] text-[#222222] text-[1.5rem]">
+                    <span className="font-[500] text-nowrap text-[#222222] text-[1.5rem]">
                       Save for later
                     </span>
                   </div>
                 </button>
                 <Link to={"/checkout"}>
-                  <button className="rounded-md font-poppins font-[400] text-[1rem] text-white py-2 bg-buttonColor w-full">
+                  <button className="rounded-md text-nowrap font-poppins font-[400] text-[1rem] text-white py-2 bg-buttonColor w-full">
                     Buy now
                   </button>
                 </Link>
