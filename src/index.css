@@ -45,6 +45,11 @@ background-repeat: no-repeat;
   background-color: #222222 !important;
 
 }
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+ 
+}
 
 
 
