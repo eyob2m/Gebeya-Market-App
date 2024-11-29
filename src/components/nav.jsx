@@ -17,13 +17,13 @@ const Nav = () => {
   const [more, setmore] = useState(false);
     const [reg, setreg] = useState(false);
   return (
-   <div>
+   <div className="z-40">
      <header className="md:hidden  relative md:text-[0.6rem] md:gap-5  flex px-4 py-2 md:py-1 items-center bg-white  justify-between">
       <MdMenu onClick={() => setsidemenu(!sidemenu)} size={25} className="md:hidden"/>
     <Link to={'/'}>
     <h1 className="mb-3 text-5xl ">ገ</h1></Link>
       <div
-        className={`absolute md:relative md:left-0 md:w-full w-[50%] duration-300 ${
+        className={`absolute md:relative md:left-0 md:w-full z-40 w-[50%] duration-300 ${
           sidemenu ? "left-0" : "-left-[60%]"
         } overflow-hidden font-poppins font-[400] md:text-[0.65rem] text-[0.75rem]   top-0`}
       >
@@ -40,7 +40,7 @@ const Nav = () => {
             <FaAngleDown  className="-mr-2 max-md:hidden" />
           </div>{" "}
           <hr className="my-2  bg-black" />
-          <div className="md:flex">
+          <div className="md:flex  ">
             <h1 className="px-4 py-2 md:hidden">Our Categories</h1>
             <h1 className="px-4 py-2 max-md:hidden">Home</h1>
             <h1 className="px-4 py-2">Men</h1>
@@ -107,7 +107,7 @@ const Nav = () => {
             <h1 className="px-4 py-2">Women</h1>
             <h1 className="px-4 py-2">Kids</h1>
             <h1 className="px-4 py-2">Accessories</h1>
-            <h1 onClick={()=>setmore(!more)} className="cursor-pointer px-4 relative py-2 flex items-center gap-2">
+            <h1 onClick={()=>setmore(!more)} className="cursor-pointer  px-4 relative py-2 flex items-center gap-2">
               More { !more ? <FaAngleDown /> : <FaAngleUp /> }<div className={`z-20 list w-[160%] bg-white absolute top-[100%] left-0 ${more ? 'block': 'hidden'}`}>
                 <h1 className="p-2 font-[500]">Perfumes</h1>
                 <hr className=" bg-[#C1C1C1] h-[1px] w-full" />

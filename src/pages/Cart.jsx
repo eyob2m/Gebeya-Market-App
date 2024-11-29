@@ -45,7 +45,7 @@ const Cart = () => {
   return (
     <div>
         <Nav />
-     <div className="w-screen  font-poppins md:hidden overflow-x-hidden">
+     <div className="w-screen   font-poppins md:hidden overflow-x-hidden">
         {/* navigation */}
       
         <div className=" px-5 overflow-hidden">
@@ -55,10 +55,10 @@ const Cart = () => {
                 <div>
                   <div>
                     <Slider {...settings}>
-                      <div className="p-3">
+                      <div className="p-3  ">
                         <div className="   rounded-md p-2">
                           <div className="p-8 py-8 mb-4 bg-[#F2F2F2] relative rounded-lg">
-                            <div className="relative bg-[#F2F2F2]">
+                            <div className="relative  bg-[#F2F2F2]">
                               <img
                                 className="rounded-lg  bg-[#F2F2F2] object-contain"
                                 src={img}
