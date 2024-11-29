@@ -18,7 +18,7 @@ const Nav = () => {
     const [reg, setreg] = useState(false);
   return (
    <div>
-     <header className="md:hidden relative md:text-[0.6rem] md:gap-5  flex px-4 py-2 md:py-1 items-center bg-white  justify-between">
+     <header className="md:hidden  relative md:text-[0.6rem] md:gap-5  flex px-4 py-2 md:py-1 items-center bg-white  justify-between">
       <MdMenu onClick={() => setsidemenu(!sidemenu)} size={25} className="md:hidden"/>
     <Link to={'/'}>
     <h1 className="mb-3 text-5xl ">ገ</h1></Link>

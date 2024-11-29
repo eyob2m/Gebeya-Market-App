@@ -44,10 +44,11 @@ const Cart = () => {
   };
   return (
     <div>
-      <div className="font-poppins md:hidden">
-        {/* navigation */}
         <Nav />
-        <div className=" px-5">
+     <div className="w-screen  font-poppins md:hidden overflow-x-hidden">
+        {/* navigation */}
+      
+        <div className=" px-5 overflow-hidden">
           <div className="border-2 pb-9 rounded-xl border-solid bg-white border-[#C1C1C1]">
             <section>
               <div>
@@ -399,7 +400,7 @@ const Cart = () => {
 
       <div className="font-poppins max-md:hidden">
         {/* navigation */}
-        <Nav />
+        
         <div className="w-full flex bg-[#f1f1f1] py-10 justify-center">
           <div className="flex w-[80%] gap-8">
             <div className="flex border-2 w-[65%] bg-white  rounded-xl border-solid  border-[#C1C1C1]">
