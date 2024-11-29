@@ -397,7 +397,7 @@ const Cart = () => {
         <Footer />
       </div>
 
-      <div className="font-poppins max-md:md:hidden">
+      <div className="font-poppins max-md:hidden">
         {/* navigation */}
         <Nav />
         <div className="w-full flex bg-[#f1f1f1] py-10 justify-center">
