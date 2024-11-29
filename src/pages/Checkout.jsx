@@ -5,7 +5,12 @@ import Footer from "../components/footer";
 import Nav from "../components/nav";
 import { CiCreditCard2 } from "react-icons/ci";
 import { LuWallet } from "react-icons/lu";
+
+import { Link} from "react-router-dom";
+
+import { toast  } from "react-hot-toast";
 const Checkout = () => {
+ 
   return (
     <div>
       <div className="max-md:hidden bg-slate-100">
@@ -239,9 +244,20 @@ const Checkout = () => {
                   </div>
                   <hr className="mb-4 bg-[#C1C1C1] h-[1px] w-full" />
                   <div className="px-8">
-                    <button className=" my-5 rounded-md font-poppins  font-[400] text-[1rem] text-white py-3 bg-buttonColor w-full">
+                    <Link to={'/'}><button
+                      onClick={()=>{ toast.success("Order Placed Successfully!", {
+                        position: "top-left",
+                        duration: 3000,
+                      }); }}
+                      
+                      className=" my-5 rounded-md font-poppins  font-[400] text-[1rem] text-white py-3 bg-buttonColor w-full"
+                    >
                       Place order
                     </button>
+                 
+                    </Link>
+                    
+                    
                   </div>
                 </div>
               </div>
@@ -477,9 +493,17 @@ const Checkout = () => {
                     <option value="">2025</option>
                   </select>
                 </div>
-                <button className=" my-5 rounded-md font-poppins  font-[400] text-[1rem] text-white py-3 bg-buttonColor w-full">
+               <Link to={'/'}>
+               <button
+                  onClick={()=>{ toast.success("Order Placed Successfully!", {
+                    position: "top-left",
+                    duration: 3000,
+                  }); }}
+                  className=" my-5 rounded-md font-poppins  font-[400] text-[1rem] text-white py-3 bg-buttonColor w-full"
+                >
                   Place order
-                </button>
+                
+                </button></Link>
               </div>
             </section>
           </div>

@@ -1,8 +1,13 @@
+/* eslint-disable react/prop-types */
 import { BsStarFill } from "react-icons/bs";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa6";
+import {  useDispatch } from 'react-redux';
+import { increment } from '../app/cart';
 
-const latestCollectionCard = (
+
+
+const LatestCollectionCard = (
 {  liked,
   image,
   stage,
@@ -13,6 +18,7 @@ const latestCollectionCard = (
   price,
   added}
 ) => {
+    const dispatch = useDispatch();
   return (
     <div className="p-3 ">
       <div className="border-solid md:w-full md:h-full md:py-5 w-[266px] border border-[#C1C1C1] rounded-md p-2">
@@ -52,11 +58,11 @@ const latestCollectionCard = (
               {price}
             </h2>
             <button
-              className={` rounded-lg  px-4 py-3 ${
-                added ? "bg-gray-400" : "bg-buttonColor"
-              }  text-[0.875rem] font-poppins font-[500] text-white`}
+            onClick={()=>dispatch(increment())}
+              className={` rounded-lg  px-4 py-3 bg-buttonColor
+               text-[0.875rem] font-poppins font-[500] text-white`}
             >
-              {added ? "Remove from cart" : "Add to Cart"}
+              {added ? "Add to Cart" : "Add to Cart"}
             </button>
           </div>
         </div>
@@ -65,4 +71,4 @@ const latestCollectionCard = (
   );
 };
 
-export default latestCollectionCard;
+export default LatestCollectionCard;

@@ -1,6 +1,8 @@
 import img from "../assets/images/men_shoe.jpg";
 import { Link } from "react-router-dom";
 import { BiCart } from "react-icons/bi";
+
+
 import {
   FaChevronDown,
   FaInstagram,
@@ -21,6 +23,7 @@ import { latestCollectionssim } from "../data/similar";
 
   
 const Cart = () => {
+  const [q,setq] = useState(1)
   let settings = {
     speed: 300,
     dots: true,
@@ -153,9 +156,9 @@ const Cart = () => {
                     Quantity:
                   </h1>
                   <div className="flex rounded-md border-solid items-center text-white  border w-full border-black">
-                    <button className="bg-[#FEA301]  flex-1">-</button>
-                    <h2 className="flex-1 text-black text-center">1</h2>
-                    <button className="bg-[#FEA301]  flex-1 ">+</button>
+                    <button className="bg-[#FEA301]  flex-1" onClick={()=>{q==1 ? null: setq(q-1)}}>-</button>
+                    <h2 className="flex-1 text-black text-center">{q}</h2>
+                    <button className="bg-[#FEA301]  flex-1 " onClick={()=>setq(q+1)}>+</button>
                   </div>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -465,7 +468,7 @@ const Cart = () => {
                 <hr className="mb-3 mt-5 bg-black h-[1px] w-full" />
                 <section className="px-8">
                   <div className="flex flex-col gap-1 ">
-                    <div className="flex w-[45%] justify-between items-center">
+                    <div className="flex w-[45%] gap-3 justify-between items-center">
                       <h1 className="text-[1.25rem] md:text-[24px]  text-[#222222] font-[500]">
                         $150
                       </h1>
@@ -500,13 +503,13 @@ const Cart = () => {
                         Quantity:
                       </h1>
                       <div className="flex rounded-md border-solid  items-center text-white  border w-full border-black">
-                        <button className="bg-[#FEA301] md:py-3 flex-1">
+                        <button onClick={()=>{q==1 ? null: setq(q-1)}} className="bg-[#FEA301] md:py-3 flex-1">
                           -
                         </button>
                         <h2 className="flex-1 text-black md:py-3 text-center">
-                          1
+                          {q}
                         </h2>
-                        <button className="bg-[#FEA301] md:py-3 flex-1 ">
+                        <button onClick={()=>setq(q+1)} className="bg-[#FEA301] md:py-3 flex-1 ">
                           +
                         </button>
                       </div>
@@ -694,7 +697,7 @@ const Cart = () => {
            Reviews
           </button>
         </div>
-     <ul className="text-[18px] flex flex-col gap-4 font-[400]">
+     <ul className="text-[18px]  flex flex-col gap-4 font-[400]">
     <li className="flex items-center gap-3"> <div className="w-2 h-2 bg-gray-500 rounded-full"></div> Available in a wide range of colors, patterns, and patterns and themes to appeal to kids.</li>
         <li className="flex items-center gap-3"> <div className="w-2 h-2 bg-gray-500 rounded-full"></div> Rubber outsoles with good traction to prevent slips and falls.</li>
         <li className="flex items-center gap-3"> <div className="w-2 h-2 bg-gray-500 rounded-full"></div> Built-in arch support to help maintain healthy foot development.</li>

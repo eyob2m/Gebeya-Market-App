@@ -3,12 +3,16 @@ import { GrNext } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import {  MdMenu } from "react-icons/md";
 import us from "../assets/Home page (Register/united kingdom.png";
-  
+  import { useSelector } from 'react-redux';
+
+
 
 import { Link } from "react-router-dom";
 import { RiSearchLine, RiShoppingBagLine } from "react-icons/ri";
 import { FaAngleDown, FaAngleUp, FaUser } from "react-icons/fa6";
 const Nav = () => {
+  const cart = useSelector((state) => state.cart.value);
+
   const [sidemenu, setsidemenu] = useState(false);
   const [more, setmore] = useState(false);
     const [reg, setreg] = useState(false);
@@ -67,11 +71,13 @@ const Nav = () => {
         <RiSearchLine size={17} />
         </div>
       </div>
-      <Link to={'/cart'}>
+      <Link className="relative" to={'/cart'}>
       <RiShoppingBagLine
-        className="bg-black md:h-6 md:bg-primaryColor text-white rounded-full p-1"
-        size={29}
-      /></Link>
+        className="bg-black   md:bg-primaryColor text-white rounded-full p-2"
+        size={32}
+      />
+      <div className="absolute -right-1 -top-3 rounded-full flex justify-center items-center text-white p-1 h-[60%] w-[60%] bg-red-500">{cart}</div></Link>
+     
      
 
       
@@ -145,7 +151,7 @@ const Nav = () => {
         className="bg-black   md:bg-primaryColor text-white rounded-full p-2"
         size={32}
       />
-      <div className="absolute -right-1 -top-3 rounded-full flex justify-center items-center text-white p-1 h-[60%] w-[60%] bg-red-500">2</div></Link>
+      <div className="absolute -right-1 -top-3 rounded-full flex justify-center items-center text-white p-1 h-[60%] w-[60%] bg-red-500">{cart}</div></Link>
      
 
       
