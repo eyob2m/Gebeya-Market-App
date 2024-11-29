@@ -1,5 +1,3 @@
-import wdress from "../assets/images/women_dress.jpg";
-import mshirt from "../assets/images/men_shirt.jpg";
 import casual from "../assets/Home page (Register/images 5.jpg";
 import vint from "../assets/Home page (Register/images 6.jpg";
 import btprod from "../assets/Home page (Register/images 7.jpg";

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { GrNext } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import {  MdMenu } from "react-icons/md";
-import img from "../assets/images/bag.jpg";
 import us from "../assets/Home page (Register/united kingdom.png";
   
 

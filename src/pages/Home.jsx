@@ -1,6 +1,5 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img from "../assets/images/men_suit.jpg";
 import Slider from "react-slick";
 import men from "../assets/Home page (Register/Ellipse 3.png";
   import le from "../assets/Home page (Register/Ellipse 5.png";
@@ -18,7 +17,6 @@ import { GrNext } from "react-icons/gr";
 
 import Footer from "./../components/footer";
 import Nav from "../components/nav";
-import { MdMenu } from "react-icons/md";
 import { FcNext } from "react-icons/fc";
 import { categoryListsP } from "../data/catPhone";
 
@@ -32,6 +30,7 @@ const Next = (props) => {
   );
 };
 const Prev = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { onClick } = props;
   return (
     <div  className="absolute -top-[60px] p-2 right-24 rotate-180 bg-buttonColor rounded-r-3xl"   onClick={onClick} >
